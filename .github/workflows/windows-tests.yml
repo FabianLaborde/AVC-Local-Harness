@@ -1,0 +1,25 @@
+name: Windows tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  unittest:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: aider_vision_code/requirements.txt
+      - name: Install dependencies
+        run: python -m pip install -r aider_vision_code/requirements.txt
+      - name: Run regression suite
+        run: python -m unittest discover -s aider_vision_code -p "test_*.py" -v

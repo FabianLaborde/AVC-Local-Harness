@@ -1,0 +1,8 @@
+[
+  {
+    "name": "aider/extra_params",
+    "extra_params": {
+      "max_tokens": 4096
+    }
+  }
+]

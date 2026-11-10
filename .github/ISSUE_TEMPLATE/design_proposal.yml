@@ -1,0 +1,33 @@
+name: Design proposal
+description: Propose a general, testable improvement to AVC
+title: "[Design]: "
+labels: [design]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Describe the general failure, not only one project's symptom.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Reproducible evidence
+      description: What test or fixture demonstrates the problem?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed design
+      description: Separate deterministic host checks from model judgment.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: How can the improvement be verified automatically and manually?
+    validations:
+      required: true

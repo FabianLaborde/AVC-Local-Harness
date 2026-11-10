@@ -1,0 +1,48 @@
+name: Bug report
+description: Report a reproducible AVC failure without private project data
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "Do not upload credentials, databases, customer code, or private logs."
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What happened and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Include a small public fixture or exact steps.
+    validations:
+      required: true
+  - type: input
+    id: commit
+    attributes:
+      label: AVC commit
+      placeholder: 40-character commit SHA
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Windows, Python, framework/SDK, model, Ollama/Aider versions.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Sanitized evidence
+      description: Relevant errors, test output, or before/after observations.
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: I removed secrets, personal paths, databases, and private source code.
+          required: true

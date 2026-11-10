@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+*.egg-info/
+
+# Editors and operating system
+.vs/
+.vscode/
+*.user
+*.suo
+.DS_Store
+Thumbs.db
+
+# AVC private/runtime state
+**/logs/
+**/recovery/
+**/avc_publish/
+workspace/
+Proyectos/
+Resultados/
+Respaldos/
+.aider*
+*.log
+*.tmp
+*.bak
+*.orig
+
+# Data, secrets, models, and archives
+.env
+.env.*
+!.env.example
+*.db
+*.sqlite
+*.sqlite3
+*.pem
+*.key
+*.pfx
+*.gguf
+*.safetensors
+*.zip
+*.7z
+*.rar
+
+# Build output and generated captures
+**/bin/
+**/obj/
+**/captura_actual.png
+**/comparacion.png
+**/mapa_diferencias.png
+**/superposicion.png
+**/mediciones.json
+**/validacion.json
+**/plan_validado.md
